@@ -1,11 +1,7 @@
 <div>
   {{album.album.name}}
 
-  <div ng-repeat="video in album.album.videos">
-    {{video.url}}
-  </div>
-  <div ng-repeat="song in album.album.songs">
-    {{song.url}}
-  </div>
+  <entity ng-repeat="video in album.album.videos" entity="video"></entity>
+  <entity ng-repeat="song in album.album.songs" entity="song"></div>
   <album ng-repeat="album in album.album.albums" album="album"></album>
 </div>
