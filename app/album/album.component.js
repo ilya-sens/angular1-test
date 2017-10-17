@@ -5,10 +5,7 @@ let albumComponent = {
   template: albumHtml,
   controllerAs: 'album',
   bindings: {
-    album: '<',
-  },
-  require: {
-    myParent: '^youtube'
+    album: '=',
   },
   controller: function ($scope) {
     const vm = this;

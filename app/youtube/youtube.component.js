@@ -4,7 +4,7 @@ import youtubeHtml from './youtube.html';
 let youtubeComponent = {
   template: youtubeHtml,
   controllerAs: 'youtube',
-  controller: function(youtubeService, $scope) {
+  controller: function(youtubeService) {
     const vm = this;
     vm.albums = [];
     vm.title = youtubeService.title();
