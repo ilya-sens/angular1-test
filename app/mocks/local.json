@@ -1,0 +1,50 @@
+[
+  {
+    "name": "My favourite songs",
+    "songs": [
+      {
+        "title": "the first",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "url": "https://www.youtube.com/watch?v=r6wXjcK4H7E"
+      }
+    ],
+    "videos": [],
+    "albums": [
+      {
+        "name": "Favourite 2016 songs",
+        "songs": [
+          {
+            "title": "the second",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "url": "https://www.youtube.com/watch?v=ERpz-xi6AE4"
+          }, {
+            "title": "the third",
+            "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+            "url": "https://www.youtube.com/watch?v=ezvTXN6vXRM"
+          }
+        ]
+      }
+    ]
+  }, {
+    "name": "My favourite movies",
+    "songs": [],
+    "videos": [
+      {
+        "title": "another video",
+        "description": "lorem ipsum dolor sit amet",
+        "url": "https://www.youtube.com/watch?v=iNJdPyoqt8U"
+      },
+      {
+        "title": "another video",
+        "description": "lorem ipsum dolor sit amet",
+        "url": "https://www.youtube.com/watch?v=zJ7hUvU-d2Q"
+      },
+      {
+        "title": "another video",
+        "description": "lorem ipsum dolor sit amet",
+        "url": "https://www.youtube.com/watch?v=6v2L2UGZJAM"
+      }
+    ],
+    "albums": []
+  }
+]
