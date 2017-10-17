@@ -1,4 +1,5 @@
 import youtubeHtml from './youtube.html';
+import _ from 'lodash';
 
 /* @ngInject */
 let youtubeComponent = {
