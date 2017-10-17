@@ -2,7 +2,7 @@ var path = require('path');
 
 exports.config = {
   specs: [
-    './example.spec.js'
+    './youtube.spec.js'
   ],
 
   capabilities: {

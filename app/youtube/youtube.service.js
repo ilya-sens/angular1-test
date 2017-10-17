@@ -1,4 +1,4 @@
-function exampleService($state) {
+function youtubeService($state) {
 
   return {
     title: () => $state.current.name
@@ -6,4 +6,4 @@ function exampleService($state) {
 
 }
 /* @ngInject */
-export default exampleService;
+export default youtubeService;
