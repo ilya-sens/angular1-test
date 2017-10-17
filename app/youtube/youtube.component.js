@@ -9,10 +9,9 @@ let youtubeComponent = {
     vm.albums = [];
     vm.title = youtubeService.title();
 
-    $scope.$watchCollection('vm.albums', ()=>{});
     youtubeService.loadAll().then((result) => {
       vm.albums = result.data;
-    }).catch((err) => {
+    }).catch((ignore) => {
       /* ignore this time */
     })
   }

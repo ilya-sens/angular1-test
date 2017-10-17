@@ -2,7 +2,7 @@ function youtubeService($state, $http) {
 
   return {
     loadAll: () => {
-      return $http.get('app/mocks/local.json')
+      return $http.get('mocks/local.json')
     },
     title: () => $state.current.name
   }
