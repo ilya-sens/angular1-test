@@ -7,8 +7,16 @@ let entityComponent = {
   bindings: {
     entity: '<',
   },
-  controller: function ($scope) {
+  controller: function ($scope, $sce) {
     const vm = this;
+    vm.entity = {
+      title: '',
+      description: '',
+      url: '',
+    };
+    vm.getUrl = () => {
+      return $sce.trustAsResourceUrl(vm.entity.url);
+    }
   }
 
 };
