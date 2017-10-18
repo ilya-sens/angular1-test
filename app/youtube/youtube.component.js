@@ -31,7 +31,6 @@ let youtubeComponent = {
       vm.videoBeingAdded = true;
     };
     vm.saveVideo = () => {
-      console.log("saving");
       vm.selectedAlbum.videos.push(vm.entityToCreate);
       vm.videoBeingAdded = false;
     };
