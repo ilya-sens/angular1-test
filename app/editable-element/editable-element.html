@@ -1,3 +1,11 @@
-<!-- TODO create ediatble component here -->
-<span class="editable" ng-bind="editableElement.value" ng-if="!beingEdited" ng-click="editable"></span>
-<input ng-model="editableElement.value" ng-if="beingEdited"><a class="btn btn-sm"></a>
+<div class="editable-element">
+  <a class="editable"
+     ng-bind="editableElement.value"
+     ng-show="!editableElement.beingEdited"
+     ng-click="editableElement.edit()">
+  </a>
+  <div ng-show="editableElement.beingEdited">
+    <input ng-model="editableElement.value">
+    <a class="button" ng-click="editableElement.save()">ok</a>
+  </div>
+</div>

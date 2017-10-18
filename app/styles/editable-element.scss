@@ -1,38 +1,43 @@
 @import 'variables';
 
-.editable {
-  cursor: pointer;
-  text-decoration: underline $gray;
-  padding-left: 8px;
-  &:after {
-    content: '\f040';
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    margin:0px 0px 0px 10px;
-    text-decoration:none;
-    visibility: hidden;
-  }
-  &:hover {
-    text-decoration:none;
+.editable-element {
+  min-width: calc(100% - 200px);
+  .editable {
+    cursor: pointer;
+    text-decoration: underline $gray;
+    padding-left: 8px;
     &:after {
-      visibility: visible;
+      content: '\f040';
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      margin:0px 0px 0px 10px;
+      text-decoration:none;
+      visibility: hidden;
+    }
+    &:hover {
+      text-decoration:none;
+      &:after {
+        visibility: visible;
+      }
+    }
+    &-textarea {
+      width: 100%;
     }
   }
-}
 
-.editable-textarea {
-  width: 100%;
-}
+  .color-gray-light {
+    color: $gray;
+  }
 
-.color-gray-light {
-  color: $gray;
-}
+  .button {
+    border: $gray solid 1px;
+    border-radius: 3px;
+    padding: 2px 5px;
+    cursor:  pointer;
+  }
 
-.changed {
-  font-weight: 600;
-}
-
-.input-group {
-  width: inherit;
+  input {
+    padding: 3px;
+  }
 }

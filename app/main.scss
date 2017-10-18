@@ -1,4 +1,5 @@
 @import 'styles/editable-element';
+@import 'styles/entity';
 
 body {
   background-color: whitesmoke;
@@ -13,6 +14,6 @@ body {
   }
 }
 
-.entity {
-  padding-top: 15px;
+.row {
+  display: flex;
 }

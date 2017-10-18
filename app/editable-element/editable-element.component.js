@@ -11,6 +11,16 @@ let editableElementComponent = {
     const vm = this;
     vm.value = {};
     vm.beingEdited = false;
+    vm.edit = () => {
+      vm.beingEdited = true;
+    };
+    vm.stopEditing = () => {
+      vm.beingEdited = false;
+    };
+    vm.save = () => {
+      /* here should be a part of saving */
+      vm.stopEditing();
+    }
   }
 
 };
