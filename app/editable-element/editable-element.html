@@ -1,8 +1,9 @@
 <div class="editable-element">
   <a class="editable"
-     ng-bind="editableElement.value"
+     ng-class="editableElement.value && editableElement.value.length > 0 ? '' : 'empty'"
      ng-show="!editableElement.beingEdited"
      ng-click="editableElement.edit()">
+    {{editableElement.value && editableElement.value.length > 0 ? editableElement.value : "not set"}}
   </a>
   <div ng-show="editableElement.beingEdited">
     <input ng-model="editableElement.value">

@@ -6,6 +6,7 @@ let entityComponent = {
   controllerAs: 'entity',
   bindings: {
     entity: '<',
+    onUpdate: '&'
   },
   controller: function ($scope, $sce) {
     const vm = this;
@@ -16,7 +17,7 @@ let entityComponent = {
     };
     vm.getUrl = () => {
       return $sce.trustAsResourceUrl(vm.entity.url);
-    }
+    };
   }
 
 };

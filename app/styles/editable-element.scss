@@ -24,17 +24,13 @@
     &-textarea {
       width: 100%;
     }
+    &.empty {
+      color: $light-gray;
+    }
   }
 
   .color-gray-light {
     color: $gray;
-  }
-
-  .button {
-    border: $gray solid 1px;
-    border-radius: 3px;
-    padding: 2px 5px;
-    cursor:  pointer;
   }
 
   input {

@@ -9,12 +9,12 @@ let youtubeComponent = {
     const vm = this;
     vm.albums = [];
     vm.albumsToSelect = [];
-    vm.selectedAlbum = {};
     vm.title = youtubeService.title();
+    vm.videoBeingAdded = false;
+    vm.selectedAlbum = undefined;
 
     vm.find = (arr, key) => {
       angular.forEach(arr, (obj) => {
-        console.log(arr);
         if (key in obj) {
           vm.albumsToSelect = _.union(vm.albumsToSelect, obj[key]);
         } else {
@@ -22,6 +22,20 @@ let youtubeComponent = {
         }
       });
     };
+    vm.addVideo = () => {
+      vm.entityToCreate = {
+        title: '',
+        description: '',
+        url: '',
+      };
+      vm.videoBeingAdded = true;
+    };
+    vm.saveVideo = () => {
+      console.log("saving");
+      vm.selectedAlbum.videos.push(vm.entityToCreate);
+      vm.videoBeingAdded = false;
+    };
+
     youtubeService.loadAll().then((result) => {
       vm.albums = result.data;
       vm.albumsToSelect = _.union(vm.albumsToSelect, vm.albums);

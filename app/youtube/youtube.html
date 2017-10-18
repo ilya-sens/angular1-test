@@ -2,8 +2,18 @@
 <h1>Welcome</h1>
 <h2>Select your album</h2>
 
-<select name="albums" id="album"
-        ng-model="youtube.selectedAlbum"
-        ng-options="album.name for album in youtube.albumsToSelect">
-</select>
-<album album="youtube.selectedAlbum"></album>
+<div class="row">
+  <select name="albums" id="album"
+          ng-model="youtube.selectedAlbum"
+          ng-options="album.name for album in youtube.albumsToSelect">
+  </select>
+  <a class="button" ng-click="youtube.addVideo()" ng-show="youtube.selectedAlbum">+ video</a>
+</div>
+<album album="youtube.selectedAlbum" ng-if="youtube.selectedAlbum"></album>
+
+<div class="modal-wrapper" ng-if="youtube.videoBeingAdded">
+  <div class="modal">
+    <entity entity="youtube.entityToCreate"></entity>
+    <a class="button" ng-click="youtube.saveVideo()">save</a>
+  </div>
+</div>
