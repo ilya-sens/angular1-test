@@ -1,3 +1,9 @@
 
 <h1>Welcome</h1>
-<album ng-repeat="album in youtube.albums" album="album"></album>
+<h2>Select your album</h2>
+
+<select name="albums" id="album"
+        ng-model="youtube.selectedAlbum"
+        ng-options="album.name for album in youtube.albumsToSelect">
+</select>
+<album album="youtube.selectedAlbum"></album>
